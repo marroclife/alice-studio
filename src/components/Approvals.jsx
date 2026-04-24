@@ -272,9 +272,9 @@ function ReviewModal({ post, onClose, onApprove, onRequestChanges, comment, setC
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-2xl max-h-[85vh] bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in">
+      <div className="relative w-full max-w-2xl max-h-[85vh] bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in flex flex-col">
         {/* Header */}
-        <div className="sticky top-0 z-10 bg-white border-b border-[#e5e4e7] px-6 py-4">
+        <div className="flex-shrink-0 bg-white border-b border-[#e5e4e7] px-6 py-4">
           <div className="flex items-start justify-between">
             <div className="flex-1 min-w-0 mr-4">
               <div className="flex items-center gap-2 mb-1.5">
@@ -297,7 +297,7 @@ function ReviewModal({ post, onClose, onApprove, onRequestChanges, comment, setC
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto p-6 space-y-6">
+        <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {/* Hook & CTA */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 bg-[#703074]/5 rounded-xl border border-[#703074]/10">
@@ -347,7 +347,7 @@ function ReviewModal({ post, onClose, onApprove, onRequestChanges, comment, setC
         </div>
 
         {/* Footer - Actions */}
-        <div className="sticky bottom-0 z-10 bg-white border-t border-[#e5e4e7] px-6 py-4 space-y-3">
+        <div className="flex-shrink-0 bg-white border-t border-[#e5e4e7] px-6 py-4 space-y-3">
           <textarea
             value={comment}
             onChange={e => setComment(e.target.value)}
